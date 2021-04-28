@@ -34,6 +34,7 @@ public class AppTest {
     public void init() {
     	cacheHelper = new CacheHelper();
 		squaredCalculator = new SquaredCalculator(cacheHelper);
+		
 	}
     
     @Test
@@ -50,11 +51,9 @@ public class AppTest {
         	log.info("Square value of " + i + " is: "
               + squaredCalculator.getSquareValueOfNumber(i) + "\n");
         }
+        
+        
     }
     
 
-    @AfterEach
-    public void destory() {
-    	cacheHelper.close();
-    }
 }
